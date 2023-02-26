@@ -75,4 +75,11 @@ public class ProductManagerTest {
         Product[] expected = new Product[]{seven};
         Assertions.assertArrayEquals(expected, results);
     }
+    @Test
+    public void SearchByAuthor() {
+        Product[] results = manager.searchBy("Сергей Лукьяненко");
+
+        Product[] expected = new Product[] {one};
+        Assertions.assertArrayEquals(expected, results);
+    }
 }

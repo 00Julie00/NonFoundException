@@ -1,5 +1,7 @@
 package ru.netology.javaqa.domain;
 
+import java.util.Collection;
+
 public class Product {
     protected int id;
     protected String name;
@@ -19,4 +21,7 @@ public class Product {
         this.price = price;
     }
 
+    public boolean matches(String search) {
+        return this.getName().contains(search);
+    }
 }

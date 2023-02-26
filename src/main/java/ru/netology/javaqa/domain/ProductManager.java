@@ -1,5 +1,7 @@
 package ru.netology.javaqa.domain;
 
+import java.util.Collection;
+
 public class ProductManager {
     protected ProductRepository repo;
 
@@ -29,5 +31,7 @@ public class ProductManager {
     public boolean matches(Product product, String search) {
         return (product.getName().contains(search));
     }
+
+
 
 }
