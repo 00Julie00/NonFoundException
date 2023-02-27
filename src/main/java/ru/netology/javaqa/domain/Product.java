@@ -21,7 +21,7 @@ public class Product {
         this.price = price;
     }
 
-    public boolean matches(String search) {
-        return this.getName().contains(search);
+    public boolean matches(Product product, String search) {
+        return (product.matches(search));
     }
 }
