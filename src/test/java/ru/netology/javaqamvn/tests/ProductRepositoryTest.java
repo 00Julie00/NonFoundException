@@ -45,14 +45,20 @@ public class ProductRepositoryTest {
     }
 
     @Test
-    public void removeById() {
+    public void removeByExistingId() {
 
         repo.removeById(2);
-        repo.removeById(7);
 
-        Product[] expected = {one, tree, four, fife, six};
+
+        Product[] expected = {one, tree, four, fife, six, seven};
         Product[] actual = repo.findAll();
         Assertions.assertArrayEquals(expected, actual);
+    }
+    @Test
+    public void removeByNonExistingId() {
+
+        Assertions.assertThrows(NotFoundException.class,
+                () -> manager.removeById(8));
     }
 
     @Test

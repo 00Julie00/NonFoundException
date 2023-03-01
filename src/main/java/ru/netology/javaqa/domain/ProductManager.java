@@ -13,6 +13,10 @@ public class ProductManager {
         repo.save(items);
     }
 
+    public void removeById(int id) {
+        repo.removeById(id);
+    }
+
     public Product[] searchBy(String text) {
         Product[] result = new Product[0];
         for (Product product : repo.getItems()) {
