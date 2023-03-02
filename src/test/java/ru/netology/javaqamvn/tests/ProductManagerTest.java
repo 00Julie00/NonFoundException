@@ -9,7 +9,7 @@ public class ProductManagerTest {
     private ProductRepository repo = new ProductRepository();
     private ProductManager manager = new ProductManager(repo);
 
-    Product one = new Book(1, "Прыжок", 199, "Сергей Лукьяненко");
+    Product one = new Book(1, "Евгений Онегин", 199, "Александр Пушкин");
     Product two = new Book(2, "Физика невозможного", 389, "Митио Каку");
     Product tree = new Book(3, "Ход королевы", 599, "Уолтер Тевис");
     Product four = new Smartphone(4, "Iphone14ProMax", 113900, "Apple");
@@ -78,7 +78,7 @@ public class ProductManagerTest {
 
     @Test
     public void SearchByAuthor() {
-        Product[] results = manager.searchBy("Сергей Лукьяненко");
+        Product[] results = manager.searchBy("Александр Пушкин");
 
         Product[] expected = {one};
         Assertions.assertArrayEquals(expected, results);
